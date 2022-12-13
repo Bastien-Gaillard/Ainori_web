@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -47,7 +46,7 @@ export default function Forgot() {
         setOpen(true);
     };
 
-    const handleClose = (event, reason) => {
+    const handleClose = (reason) => {
         if (reason === 'clickaway') {
             return;
         }
@@ -56,7 +55,7 @@ export default function Forgot() {
     };
     const handleSubmit = (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
+        const data = event.currentTarget;
         const email = data.get('email');
         if (email === "") {
             setValidate(3);
