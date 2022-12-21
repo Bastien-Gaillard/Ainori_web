@@ -12,7 +12,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />}>
-          <Route index element={<SignIn />} />
+          <Route index element={<SignIn />}/>
           <Route path="signin" element={<SignIn />} />
           <Route path="forgot" element={<Forgot />} />
           <Route path="mycars" element={<Home />} />
